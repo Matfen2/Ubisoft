@@ -1,4 +1,5 @@
 import Connect from "./components/Connect"
+import Footer from "./components/Footer"
 import Main from "./components/Main"
 import Worlds from "./components/Worlds"
 
@@ -8,6 +9,7 @@ const App = () => {
       <Main />
       <Connect />
       <Worlds />
+      <Footer />
     </div>
   )
 }

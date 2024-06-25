@@ -1,6 +1,3 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { useState } from 'react';
-
 import acLogo from "../assets/picts/assassinsCreed.jpeg";
 import acWallpaper from "../assets/picts/assassinsCreedWallpaper.png";
 import farCryLogo from "../assets/picts/farCry.jpeg";
@@ -18,22 +15,7 @@ import theDivisionWallpaper from "../assets/picts/theDivisionWallpaper.jpg";
 import ghostReconLogo from "../assets/picts/ghostRecon.jpeg";
 import ghostReconWallpaper from "../assets/picts/ghostReconWallpaper.jpeg";
 
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-
-import '../styles/index.scss';
-
-import { EffectFade, Navigation } from 'swiper/modules';
-
-const Main = () => {
-  const [currentWallpaper, setCurrentWallpaper] = useState(acWallpaper);
-
-  const showWorld = (e, wallpaper) => {
-    e.preventDefault();
-    setCurrentWallpaper(wallpaper);
-  };
-
+const Worlds = () => {
   const worlds = [
     {
       id: 1,
@@ -77,42 +59,25 @@ const Main = () => {
     },
   ];
 
-  const worldsChunks = [];
-  for (let i = 0; i < worlds.length; i += 4) {
-    worldsChunks.push(worlds.slice(i, i + 4));
-  }
+  const listWorlds = worlds.map((world, index) => (
+    <div key={index} className="col-lg-3">
+      <div className="card">
+        <div className="card-body">
+          <img
+            src={world.pict}
+            className="img-fluid w-100"
+          />
+        </div>
+      </div>
+    </div>
+  ));
 
   return (
-    <div id="worlds" style={{ backgroundImage: `url(${currentWallpaper})` }}>
-      <Swiper
-        spaceBetween={30}
-        effect={'fade'}
-        navigation={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[EffectFade, Navigation]}
-        className="mySwiper"
-      >
-        {worldsChunks.map((chunk, index) => (
-          <SwiperSlide key={index}>
-            <div className="row">
-              {chunk.map((world) => (
-                <div key={world.id} className="col-lg-3">
-                  <img
-                    src={world.pict}
-                    className="img-fluid w-100"
-                    onMouseEnter={(e) => showWorld(e, world.wallpaper)}
-                  />
-                </div>
-              ))}
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div id="worlds">
+      <div className="row">{listWorlds}</div>
     </div>
   );
 };
 
-export default Main;
+export default Worlds;
 

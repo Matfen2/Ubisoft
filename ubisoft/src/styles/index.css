@@ -61,7 +61,7 @@ body {
   background-color: azure;
   border: 1px solid black;
   opacity: 1;
-  transition: all 0.25ms ease;
+  transition: all 0.3s ease;
 }
 #main .swiper-pagination-bullet:hover {
   transform: scale(1.6);
@@ -83,83 +83,239 @@ body {
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.8);
 }
+#main .offcanvas .offcanvas-header .btn-close .fa-solid {
+  color: azure;
+  font-size: 1.4em;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-4 .tab {
+  display: flex;
+  line-height: 190px;
+  flex-direction: column;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-4 .tab button {
+  opacity: 0.7;
+  color: azure;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  font-size: 1.6em;
+  transition: all 0.3s ease;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-4 .tab button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Jeux {
+  margin-top: 90px;
+  margin-right: 120px;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Jeux h3 {
+  color: azure;
+  font-size: 2.2em;
+  text-align: center;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Jeux .row {
+  margin-top: 10px;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Jeux .row .col-lg-4 a .img-fluid {
+  border-radius: 5px;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Jeux .row .col-lg-4 .listPlateform {
+  margin-top: 10px;
+  text-align: center;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Jeux .row .col-lg-4 .listPlateform .fa-brands {
+  color: azure;
+  font-size: 1.4em;
+  margin: 0px 40px 0px 40px;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Jeux #btnOtherGames {
+  display: block;
+  margin: 15px auto;
+  border-radius: 5px;
+  color: azure;
+  background: transparent;
+  border: 1px solid azure;
+  transition: all 0.2ms ease;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Jeux #btnOtherGames:hover {
+  transform: scale(1.1);
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Studios {
+  margin-top: 40px;
+  margin-right: 120px;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Studios h3 {
+  color: azure;
+  font-size: 2.2em;
+  text-align: center;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Studios .row {
+  text-align: center;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Studios .row .col-lg-6 a .img-fluid {
+  height: 280px;
+  max-width: 500px;
+  margin: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Studios .row .col-lg-6 .city p {
+  color: azure;
+  font-weight: bold;
+  font-size: 1.8em;
+  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Studios .row #btnOtherStudios {
+  display: block;
+  margin: 15px auto;
+  border-radius: 5px;
+  color: azure;
+  background: transparent;
+  border: 1px solid azure;
+  transition: all 0.2ms ease;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Studios .row #btnOtherStudios:hover {
+  transform: scale(1.1);
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Studios #btnOtherStudios {
+  display: block;
+  margin: 15px auto;
+  border-radius: 5px;
+  color: azure;
+  background: transparent;
+  border: 1px solid azure;
+  transition: all 0.2ms ease;
+}
+#main .offcanvas .offcanvas-body .row .col-lg-8 #Studios #btnOtherStudios:hover {
+  transform: scale(1.1);
+}
 
 .connect {
-  padding: 10px 0px 40px 0px;
+  padding: 0px 0px 20px 0px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("../assets/picts/ubisoftConnectWallpaper.png");
 }
 .connect .img-fluid {
-  margin: -60px auto;
-  height: 260px;
+  margin: -20px auto;
+  height: 240px;
   display: block;
   max-width: 600px;
 }
-.connect .cheat {
+.connect .infoConnect {
+  margin-top: -15px;
+}
+.connect .infoConnect .cheat {
   color: azure;
   font-size: 1.6em;
-  margin: 40px auto;
+  margin: auto;
   text-align: center;
   padding-bottom: 0px;
 }
-.connect #btnDownload {
-  margin: -15px auto;
+.connect .infoConnect #btnDownload {
+  margin: 20px auto;
   padding: 5px;
   display: block;
   border-radius: 10px;
-  transition: all 0.25ms ease;
+  transition: all 0.3s ease;
   border: 1px solid azure;
   background-color: transparent;
 }
-.connect #btnDownload:hover {
+.connect .infoConnect #btnDownload:hover {
   transform: scale(1.2);
-  background-color: azure;
+  box-shadow: 1px 1px 4px 4px #ffffff;
 }
-.connect #btnDownload a {
+.connect .infoConnect #btnDownload a {
   color: azure;
   letter-spacing: 2px;
   font-weight: bold;
   text-decoration: none;
 }
-.connect #btnDownload a:hover {
-  color: black;
-}
 
 #worlds {
-  width: 100vw;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-  background-size: cover;
-  background-position: center;
+  background-color: rgb(64, 64, 64);
 }
-#worlds .mySwiper {
-  width: 100%;
-  height: 100%;
+#worlds .row .col-lg-3 .card {
+  border: none;
+  background: transparent;
 }
-#worlds .mySwiper .swiper-slide {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-#worlds .mySwiper .swiper-slide .col-lg-3 {
-  flex: 0 0 25%;
-  max-width: 25%;
-  padding: 15px;
-}
-#worlds .mySwiper .swiper-slide .col-lg-3 img {
-  max-width: 400px;
+#worlds .row .col-lg-3 .card .card-body .img-fluid {
+  opacity: 0.6;
+  height: 150px;
   cursor: pointer;
-  opacity: 0.8;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  max-width: 400px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
-#worlds .mySwiper .swiper-slide .col-lg-3 img:hover {
+#worlds .row .col-lg-3 .card .card-body .img-fluid:hover {
   opacity: 1;
   transform: scale(1.1);
+}
+
+.footer {
+  height: 130px;
+  display: flex;
+  -moz-column-gap: 160px;
+       column-gap: 160px;
+  align-items: center;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+  padding: 40px 0px 40px 0px;
+  background-color: rgb(48, 48, 48);
+}
+.footer .listSocial {
+  display: flex;
+  -moz-column-gap: 150px;
+       column-gap: 150px;
+  margin-top: 15px;
+  flex-direction: row;
+  list-style-type: none;
+}
+.footer .listSocial li a .fa-brands {
+  color: azure;
+  font-size: 1.3em;
+  transition: all 0.2ms ease;
+}
+.footer .listSocial li a .fa-brands:hover {
+  transform: scale(1.2);
+  text-shadow: #FFF 0px 0px 3px, #FFF 0px 0px 10px, 2px 2px 2px rgba(206, 89, 55, 0);
+}
+.footer .img-fluid {
+  height: 90px;
+  max-width: 80px;
+}
+.footer #formNewsLetter {
+  display: flex;
+  flex-direction: column;
+}
+.footer #formNewsLetter label {
+  color: azure;
+  font-weight: bold;
+}
+.footer #formNewsLetter .sendEmail {
+  display: flex;
+  margin-top: 7px;
+  flex-direction: row;
+}
+.footer #formNewsLetter .sendEmail input {
+  width: 70%;
+  display: block;
+  margin: 8px auto;
+  border-radius: 5px;
+}
+.footer #formNewsLetter .sendEmail #btnSend {
+  height: 34px;
+  margin-top: 6px;
+  color: azure;
+  margin-right: 59px;
+  border-radius: 5px;
+  border: 1px solid azure;
+  background: transparent;
+  transition: all 0.1ms ease;
+}
+.footer #formNewsLetter .sendEmail #btnSend:hover {
+  transform: scale(1.2);
 }/*# sourceMappingURL=index.css.map */

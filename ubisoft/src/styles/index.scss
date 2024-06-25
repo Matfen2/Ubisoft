@@ -13,22 +13,18 @@ body {
   height: 99vh;
   overflow: hidden;
   position: relative;
-
   .mySwiper {
     width: 100%;
     height: 100%;
-
     .swiper-slide {
       width: 100%;
       height: 100%;
       position: relative;
-
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-
       .text-overlay {
         position: absolute;
         top: 80%;
@@ -43,7 +39,6 @@ body {
           font-size: 1.2em;
         }
       }
-
       #btnBar {
         position: absolute;
         top: 10px;
@@ -59,120 +54,303 @@ body {
       }
     }
   }
-
   .swiper-pagination-bullet {
       width: 12px;
       height: 10px;
       background-color: azure;
       border: 1px solid black;
       opacity: 1;
-      transition: all 0.25ms ease;
+      transition: all 0.3s ease;
       &:hover {
         transform: scale(1.6);
       }
     }
-
     .swiper-pagination-bullet-active {
       background-color: azure;
     }
-
   .offcanvas-animate {
     transition: transform 0.3s ease-in-out;
     transform: translateX(-100%);
-
     &.show {
       transform: translateX(0);
     }
-
     &.hide {
       transform: translateX(-100%);
     }
   }
-
   .offcanvas {
     &.offcanvas-start {
       width: 100vw;
       background-color: rgba(0, 0, 0, 0.8);
+    }
+    .offcanvas-header {
+      .btn-close {
+        .fa-solid {
+          color: azure;
+          font-size: 1.4em;
+        }
+      }
+    }
+    .offcanvas-body {
+      .row {
+        .col-lg-4 {
+          .tab {
+            display: flex;
+            line-height: 190px;
+            flex-direction: column;
+            button {
+              opacity: 0.7;
+              color: azure;
+              font-weight: bold;
+              background: transparent;
+              border: none;
+              font-size: 1.6em;
+              transition: all 0.3s ease;
+              &:hover {
+                opacity: 1.0;
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+        .col-lg-8 {
+          // JEUX
+          #Jeux {
+            margin-top: 90px;
+            margin-right: 120px;
+            h3 {
+              color: azure;
+              font-size: 2.2em;
+              text-align: center;
+            }
+            .row {
+              margin-top: 10px;
+              .col-lg-4 {
+                a {
+                  .img-fluid {
+                    border-radius: 5px;
+                  }
+                }
+                .listPlateform {
+                  margin-top: 10px;
+                  text-align: center;
+                  .fa-brands {
+                    color: azure;
+                    font-size: 1.4em;
+                    margin: 0px 40px 0px 40px;
+                  }
+                }
+              }
+            }
+            #btnOtherGames {
+              display: block;
+              margin: 15px auto;
+              border-radius: 5px;
+              color: azure;
+              background: transparent;
+              border: 1px solid azure;
+              transition: all 0.2ms ease;
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+          // STUDIOS
+          #Studios {
+            margin-top: 40px;
+            margin-right: 120px;
+            h3 {
+              color: azure;
+              font-size: 2.2em;
+              text-align: center;
+            }
+            .row {
+              text-align: center;
+              .col-lg-6 {
+                a {
+                  .img-fluid {
+                    height: 280px;
+                    max-width: 500px;
+                    margin: 15px;
+                    cursor: pointer;
+                    border-radius: 10px;
+                  }
+                }
+                .city {
+                  p {
+                    color: azure;
+                    font-weight: bold;
+                    font-size: 1.8em;
+                    text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+                  }
+                }
+              }
+              #btnOtherStudios {
+                display: block;
+                margin: 15px auto;
+                border-radius: 5px;
+                color: azure;
+                background: transparent;
+                border: 1px solid azure;
+                transition: all 0.2ms ease;
+                &:hover {
+                  transform: scale(1.1);
+                }
+              }
+            }
+            #btnOtherStudios {
+              display: block;
+              margin: 15px auto;
+              border-radius: 5px;
+              color: azure;
+              background: transparent;
+              border: 1px solid azure;
+              transition: all 0.2ms ease;
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
 
 // CONNECT
 .connect {
-  padding: 10px 0px 40px 0px;
+  padding: 0px 0px 20px 0px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url('../assets/picts/ubisoftConnectWallpaper.png');
   .img-fluid {
-    margin: -60px auto;
-    height: 260px;
+    margin: -20px auto;
+    height: 240px;
     display: block;
     max-width: 600px;
   }
-  .cheat {
-    color: azure;
-    font-size: 1.6em;
-    margin: 40px auto;
-    text-align: center;
-    padding-bottom: 0px;
-  }
-  #btnDownload {
-    margin: -15px auto;
-    padding: 5px;
-    display: block;
-    border-radius: 10px;
-    transition: all 0.25ms ease;
-    border: 1px solid azure;
-    background-color: transparent;
-    &:hover {
-      transform: scale(1.2);
-      background-color: azure;
-    }
-    a {
+  .infoConnect {
+    margin-top: -15px;
+    .cheat {
       color: azure;
-      letter-spacing: 2px;
-      font-weight: bold;
-      text-decoration: none;
-      &:hover {
-        color: black;
-      }
+      font-size: 1.6em;
+      margin: auto;
+      text-align: center;
+      padding-bottom: 0px;
     }
-  } 
+    #btnDownload {
+      margin: 20px auto;
+      padding: 5px;
+      display: block;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      border: 1px solid azure;
+      background-color: transparent;
+      &:hover {
+        transform: scale(1.2);
+        box-shadow: 1px 1px 4px 4px #ffffff;
+      }
+      a {
+        color: azure;
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    } 
+  }
 }
 
 // WORLDS
 #worlds {
-  width: 100vw;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  .mySwiper {
-    width: 100%;
-    height: 100%;
-    .swiper-slide {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      .col-lg-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
-        padding: 15px;
-        img {
-          max-width: 400px;
-          cursor: pointer;
-          opacity: 0.8;
-          border-radius: 10px;
-          transition: transform 0.3s ease;
-          &:hover {
-            opacity: 1.0;
-            transform: scale(1.1);
+  background-color: rgb(64, 64, 64);
+  .row {
+    .col-lg-3 {
+      .card {
+        border: none;
+        background: transparent;
+        .card-body {
+          .img-fluid {
+            opacity: 0.6;
+            height: 150px;
+            cursor: pointer;
+            max-width: 400px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            &:hover {
+              opacity: 1.0;
+              transform: scale(1.1);
+            }
           }
+        }
+      }
+    }
+  }
+}
+
+// FOOTER
+.footer {
+  height: 130px;
+  display: flex;
+  column-gap: 160px;
+  align-items: center;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+  padding: 40px 0px 40px 0px;
+  background-color: rgb(48, 48, 48);
+  .listSocial {
+    display: flex;
+    column-gap: 150px;
+    margin-top: 15px;
+    flex-direction: row;
+    list-style-type: none;
+    li {
+      a {
+        .fa-brands {
+          color: azure;
+          font-size: 1.3em;
+          transition: all 0.20ms ease;
+          &:hover {
+            transform: scale(1.2);
+            text-shadow: #FFF 0px 0px 3px, #FFF 0px 0px 10px, 2px 2px 2px rgba(206,89,55,0);
+          }
+        }
+      }
+    }
+  }
+  .img-fluid {
+    height: 90px;
+    max-width: 80px;
+  }
+  #formNewsLetter {
+    display: flex;
+    flex-direction: column;
+    label {
+      color: azure;
+      font-weight: bold;
+    }
+    .sendEmail {
+      display: flex;
+      margin-top: 7px;
+      flex-direction: row;
+      input {
+        width: 70%;
+        display: block;
+        margin: 8px auto;
+        border-radius: 5px;
+      }
+      #btnSend {
+        height: 34px;
+        margin-top: 6px;
+        color: azure;
+        margin-right: 59px;
+        border-radius: 5px;
+        border: 1px solid azure;
+        background: transparent;
+        transition: all 0.10ms ease;
+        &:hover {
+          transform: scale(1.2);
         }
       }
     }
